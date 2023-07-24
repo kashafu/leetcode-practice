@@ -1,27 +1,33 @@
 # Leetcode Practise & Solution.
 
-Solving leetCode.
+# String Matching in an Array
 
-https://leetcode.com/problems/two-sum/description/
+https://leetcode.com/problems/string-matching-in-an-array/description/
 
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+Given an array of string words, return all strings in words that is a substring of another word. You can return the answer in any order.
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-You can return the answer in any order.
-
-
+A substring is a contiguous sequence of characters within a string
 
 Example 1:
 
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+Input: words = ["mass","as","hero","superhero"]
+Output: ["as","hero"]
+Explanation: "as" is substring of "mass" and "hero" is substring of "superhero".
+["hero","as"] is also a valid answer.
 Example 2:
 
-Input: nums = [3,2,4], target = 6
-Output: [1,2]
+Input: words = ["leetcode","et","code"]
+Output: ["et","code"]
+Explanation: "et", "code" are substring of "leetcode".
 Example 3:
 
-Input: nums = [3,3], target = 6
-Output: [0,1]
+Input: words = ["blue","green","bu"]
+Output: []
+Explanation: No string of words is substring of another string.
+
+Constraints:
+
+1 <= words.length <= 100
+1 <= words[i].length <= 30
+words[i] contains only lowercase English letters.
+All the strings of words are unique.
