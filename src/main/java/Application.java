@@ -4,11 +4,11 @@ public class Application {
 
     public static void main(String[] args) {
 
-        Solution solution = new Solution();
-        String[] words = {"mass","as","hero","superhero"};
+        int[] array =  {2,4,6,8,10,12};
+        int key = 10;
 
-        List<String> result = solution.stringMatchingHashSet(words);
-        System.out.println(result);
+        System.out.println("Simple Search:  " + new SimpleSearch().search(array, key));
+        System.out.println("Binary Search:  " + new BinarySearch().search(array, key));
     }
 
 
