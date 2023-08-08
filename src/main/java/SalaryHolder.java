@@ -1,0 +1,3 @@
+interface SalaryHolder {
+    double getSalary();
+}
