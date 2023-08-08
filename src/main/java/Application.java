@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class Application {
 
     public static void main(String[] args) {
@@ -16,7 +14,7 @@ public class Application {
 
         productOwner.adjustSalary(intern, 22000);
         productOwner.adjustSalary(developer, 55000);
-//        productOwner.adjustSalary(productOwnerAdjustTest, 90000);
+        productOwner.adjustSalary(productOwnerAdjustTest, 90000);
 
         System.out.println("\n----------- Adjusted Salary ----------------- ");
         System.out.println("Adjusted Intern's Salary: " + intern.getSalary());
