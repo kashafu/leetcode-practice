@@ -7,6 +7,8 @@ public class Application {
         printArray(new BubbleSort().search(array), "Bubble Sort :");
         printArray(new SelectionSort().search(array), "Selection Sort :");
         printArray(new InsertionSort().search(array), "Insertion Sort :");
+        printArray(new MergeSort().search(array), "Merge Sort :");
+        printArray(new QuickSort().search(array), "Quick Sort :");
     }
 
 
