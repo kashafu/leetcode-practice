@@ -1,15 +1,20 @@
-import java.util.List;
-
 public class Application {
 
     public static void main(String[] args) {
 
-        int[] array =  {2,4,6,8,10,12};
-        int key = 10;
+        int[] array =  {20,4,12,18,10,2};
 
-        System.out.println("Simple Search:  " + new SimpleSearch().search(array, key));
-        System.out.println("Binary Search:  " + new BinarySearch().search(array, key));
+        printArray(new BubbleSort().search(array), "Bubble Sort :");
+        printArray(new SelectionSort().search(array), "Selection Sort :");
+        printArray(new InsertionSort().search(array), "Insertion Sort :");
     }
 
 
+    public static void printArray(int[] array, String description) {
+        System.out.println(description);
+        for (int j : array) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
+    }
 }
