@@ -13,7 +13,7 @@ public class FibonacciRecursiveNegative {
                 System.out.println(e.getMessage());
             }
         } else {
-            System.out.println("Use syntax: java FibonacciRecursiveNegative n");
+            System.out.println("Enter the arguments");
         }
     }
 
