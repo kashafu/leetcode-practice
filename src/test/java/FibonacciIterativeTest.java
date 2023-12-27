@@ -6,8 +6,8 @@ import java.util.InputMismatchException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FibonacciRecursiveTest {
-    private FibonacciRecursive fib;
+class FibonacciIterativeTest {
+    private FibonacciIterative fib;
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
 
@@ -25,77 +25,77 @@ class FibonacciRecursiveTest {
     @Test
     void main_EmptyString() {
         String[] args = new String[]{};
-        FibonacciRecursive.main(args);
+        FibonacciIterative.main(args);
         assertEquals("Enter the arguments\n", outContent.toString());
     }
 
     @Test
     void main_NonInteger() {
         String[] args = new String[]{"Kashaf"};
-        FibonacciRecursive.main(args);
+        FibonacciIterative.main(args);
         assertEquals("Invalid Input. Please enter a positive integer\n", outContent.toString());
     }
 
     @Test
     void main_Valid() {
         String[] args = new String[]{"23"};
-        FibonacciRecursive.main(args);
+        FibonacciIterative.main(args);
         assertEquals("F(23) = 28657\n", outContent.toString());
     }
 
     @Test
     void main_NegativeInteger() {
         String[] args = new String[]{"-1"};
-        FibonacciRecursive.main(args);
+        FibonacciIterative.main(args);
         assertEquals("Invalid Input. Please enter a positive integer\n", outContent.toString());
     }
 
     @Test
     void main_LargeInteger() {
         String[] args = new String[]{"47"};
-        FibonacciRecursive.main(args);
+        FibonacciIterative.main(args);
         assertEquals("Fibonacci number is too large for this input. Please enter a number less than 47!\n", outContent.toString());
     }
 
     @Test
-    void FibonacciRec_Negative() {
+    void FibonacciIterative_Negative() {
         assertThrows(InvalidInputException.class,
-                () -> fib = new FibonacciRecursive(-100));
+                () -> fib = new FibonacciIterative(-100));
     }
 
     @Test
-    void FibonacciRec_NegativeBoundary() {
+    void FibonacciIterative_NegativeBoundary() {
         assertThrows(InvalidInputException.class,
-                () -> fib = new FibonacciRecursive(-1));
+                () -> fib = new FibonacciIterative(-1));
     }
 
     @Test
-    void FibonacciRec_LowerBoundary() throws InputMismatchException, InvalidInputException {
-        fib = new FibonacciRecursive(0);
+    void FibonacciIterative_LowerBoundary() throws InputMismatchException, InvalidInputException {
+        fib = new FibonacciIterative(0);
         assertEquals("F(0) = 0\n", outContent.toString());
     }
 
     @Test
-    void FibonacciRec_MidRange() throws InputMismatchException, InvalidInputException {
-        fib = new FibonacciRecursive(23);
+    void FibonacciIterative_MidRange() throws InputMismatchException, InvalidInputException {
+        fib = new FibonacciIterative(23);
         assertEquals("F(23) = 28657\n", outContent.toString());
     }
 
     @Test
-    void FibonacciRec_UpperBoundary() throws InputMismatchException, InvalidInputException {
-        fib = new FibonacciRecursive(46);
+    void FibonacciIterative_UpperBoundary() throws InputMismatchException, InvalidInputException {
+        fib = new FibonacciIterative(46);
         assertEquals("F(46) = 1836311903\n", outContent.toString());
     }
 
     @Test
-    void FibonacciRec_ExceedLimitBoundary() {
+    void FibonacciIterative_ExceedLimitBoundary() {
         assertThrows(InputMismatchException.class,
-                () -> fib = new FibonacciRecursive(47));
+                () -> fib = new FibonacciIterative(47));
     }
 
     @Test
-    void FibonacciRec_ExceedLimit() {
+    void FibonacciIterative_ExceedLimit() {
         assertThrows(InputMismatchException.class,
-                () -> fib = new FibonacciRecursive(100));
+                () -> fib = new FibonacciIterative(100));
     }
 }

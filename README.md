@@ -1,3 +1,3 @@
 # Practise & Solution.
 
-Find the fibonacci series with positive
+Find the fibonacci series iterative with positive
