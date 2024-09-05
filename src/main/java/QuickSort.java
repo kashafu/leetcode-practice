@@ -1,5 +1,9 @@
 public class QuickSort {
 
+//    Worst : O(n^2)
+//    Average : O(nlogn)
+// Worst case occurs when pivot is always the smallest or the largest element.
+
     public int[] search(int[] array) {
 
         int n = array.length;
@@ -17,11 +21,14 @@ public class QuickSort {
             if(array[j]<pivot)
             {
                 i++;
+                //Swap
                 int temp=array[i];
                 array[i]=array[j];
                 array[j]=temp;
             }
         }
+
+        //Swap with pivot
         i++;
         int temp=array[i];
         array[i]=pivot;
