@@ -41,8 +41,8 @@ public class QuickSort {
         if(low<high)
         {
             int pivotIndex = partition(array, low, high);
-            quicksort(array, low,pivotIndex-1);
-            quicksort(array,pivotIndex+1, high);
+            quicksort(array, low,pivotIndex-1); // low sorted means left
+            quicksort(array,pivotIndex+1, high); // high sorted means right
         }
     }
 
