@@ -4,11 +4,7 @@ public class Application {
 
         int[] array =  {20,4,12,18,10,2};
 
-        printArray(new BubbleSort().search(array), "Bubble Sort :");
-        printArray(new SelectionSort().search(array), "Selection Sort :");
-        printArray(new InsertionSort().search(array), "Insertion Sort :");
-        printArray(new MergeSort().search(array), "Merge Sort :");
-        printArray(new QuickSort().search(array), "Quick Sort :");
+        printArray(new BinarySearchTree().search(array), "Binary Search Tree :");
     }
 
 
