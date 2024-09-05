@@ -14,11 +14,12 @@ public class QuickSort {
 
     public static int partition(int []array,int low,int high)
     {
-        int pivot=array[high];
-        int i=low-1;
-        for(int j=low;j<high;j++)
+        int pivot=array[high]; // taking last element as pivot
+        int i=low-1; // i function is to find out how much smaller elements than pivot
+
+        for(int j=low; j<high; j++)
         {
-            if(array[j]<pivot)
+            if(array[j] < pivot) // element which has less than pivot
             {
                 i++;
                 //Swap
