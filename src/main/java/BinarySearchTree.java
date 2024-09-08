@@ -6,7 +6,8 @@ public class BinarySearchTree {
     public int[] search(int[] array) {
         // Insert all elements from the array into the BST
         for (int num : array) {
-            insert(num);
+            // Insert a new value into the BST
+            root = insertRec(root, num);
         }
 
         // Prepare an array to store the inorder traversal (sorted elements)
@@ -20,11 +21,6 @@ public class BinarySearchTree {
     // Constructor to initialize the tree
     public BinarySearchTree() {
         root = null;
-    }
-
-    // Insert a new value into the BST
-    void insert(int data) {
-        root = insertRec(root, data);
     }
 
     // Recursive function to insert a new value
